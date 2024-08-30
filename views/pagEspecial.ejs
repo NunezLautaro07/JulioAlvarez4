@@ -1,6 +1,5 @@
-<!-- views/pagEspecial.ejs -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +10,46 @@
     <link rel="stylesheet" href="./cssaw/solid.css">
     <link rel="stylesheet" href="./css/style.css">
     <style>
-        .centro{margin: 0 auto;}
+        body{justify-content: center;
+        align-content: center;}
+        .centero2{width: 50%;
+        margin-left: 36%;}
+        .centro { 
+            margin: 0 auto; 
+        }
+        form input[type="text"], form input[type="file"], form input[type="submit"] {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+        form label {
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
+    <div class="centero2">
     <h1>Crear nuevo Podcast</h1>
     <div class="container-fluid">
         <div class="centro d-flex w-100">
-    <form action="/private" method="post" enctype="multipart/form-data" class="d-block py-1 my-2">
-        <input type="text" name="Nombre" placeholder="Nombre del podcast" class="d-block py-1 my-2">
-        <input type="text" name="Tema" placeholder="Tema del podcast" class="d-block py-1 my-2">
-        <input type="text" name="Descripcion" placeholder="Descripción del podcast" class="d-block py-1 my-2">
-        <input type="file" name="pdf" />
-        <input type="file" name="imagen" />
-        <input type="file" name="audio" />
-      
-        <input type="submit" value="Crear Podcast" class="d-block py-1 my-2">
-    </form>
-</div>
-</div>
+            <form action="/private" method="post" enctype="multipart/form-data" class="d-block py-1 my-2">
+                <input type="text" name="Nombre" placeholder="Nombre del podcast" class="d-block py-1 my-2">
+                <input type="text" name="Tema" placeholder="Tema del podcast" class="d-block py-1 my-2">
+                <input type="text" name="Descripcion" placeholder="Descripción del podcast" class="d-block py-1 my-2">
+                
+                <label for="pdf">PDF</label>
+                <input type="file" name="pdf" id="pdf" class="d-block py-1 my-2">
+                
+                <label for="imagen">Imagen</label>
+                <input type="file" name="imagen" id="imagen" class="d-block py-1 my-2">
+                
+                <label for="audio">Audio</label>
+                <input type="file" name="audio" id="audio" class="d-block py-1 my-2">
+                
+                <input type="submit" value="Crear Podcast" class="d-block py-1 my-2">
+            </form>
+        </div>
+    </div>    </div>
 </body>
 </html>

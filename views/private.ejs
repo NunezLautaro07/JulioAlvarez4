@@ -1,29 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./cssaw/fontawesome.min.css">
-    <link rel="stylesheet" href="./cssaw/solid.css">
-    <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./cssaw/fontawesome.min.css">
+  <link rel="stylesheet" href="./cssaw/solid.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Document</title>
   <style>
-.centro{
- margin: 0  auto;
-}
+    html, body {
+      height: 100%;
+      
+    }
+    .container-fluid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .centro {
+      justify-content: center;
+    }
+    form{width: 50%;
+    margin-left: 25%;}
+    input[type="text"], input[type="password"] {
+      border-radius: 8px;
+      padding: 10px;
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+      border-radius: 8px;
+      padding: 10px;
+      width: 100%;
+      max-width: 300px;
+      
+      color: white;
+    }
   </style>
 </head>
 <body>
-  <div class="container-fluid ">
-    <div class="d-flex centro  w-100">
-  <form action="" method="post" class="centro"  >
-    <input type="text" id="Nombre" name="Persona" placeholder="Nombre" class="d-block py-1 my-2 text-center" />
-    <input type="password" id="Contraseña" name="Contraseña" placeholder="Contraseña" class="d-block py-1 my-2 text-center" />
-    <input type="submit" value="Enviar"  class="d-block text-center"/>
-  </form>
-</div>
-</div>
+  <div class="container-fluid">
+    <div class="centro">
+      <form action="" method="post">
+        <input type="text" id="Nombre" name="Persona" placeholder="Nombre" class="py-1 my-2 text-center" />
+        <input type="password" id="Contraseña" name="Contraseña" placeholder="Contraseña" class="py-1 my-2 text-center" />
+        <input type="submit" value="Enviar" class="text-center"/>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
